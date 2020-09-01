@@ -24,14 +24,21 @@
 \advance\evensidemargin 25mm \topmargin -1in
  %\advance\topmargin 1cm
 \advance\topmargin 10mm \textheight = 700pt
-
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}
 
 \title{Teoria kategorii}
-\author{Seria 1}
+\author{Seria 1: Kategorie i funktory}
 \begin{document}
 \maketitle
+
+\blfootnote{\today}
 \begin{problem}
-Pokazać, że kategoria $\mathsf{Set}$ nie jest izomorficzna z kategorią $\mathsf{Set}^{op}$. Pokazać, że $\mathsf{Rel}\cong \mathsf{Rel}^{op}$. 
+Pokazać, że $\mathsf{Rel}\cong \mathsf{Rel}^{op}$. 
 \end{problem}
 
 
@@ -50,56 +57,64 @@ $$
 $$
 \end{itemize}
 \end{problem}
+%
+%\begin{problem}
+%
+%\end{problem}
 
 \begin{problem}
-Pokazać, że każdy izomorfizm jest mono i epi.
+Pokazać, że kategoria $\mathsf{Set}$ nie jest izomorficzna z kategorią $\mathsf{Set}^{op}$. 
 \end{problem}
-
-\begin{problem}
-Pokazać, że w $\mathsf{Set}$ przekształcenie $f:X\to Y$ jest "na" wtedy i tylko wtedy, gdy jest epimorfizmem.
-\end{problem}
-
-
-\begin{problem}
-Niech $f:X\to Y$, $g:Y\to Z$ oraz $h:X\to Z$ spełniają $h= g\circ f$. Pokazać, że 
-\begin{itemize}
-\item jeśli $f,g$ są izo to $h$ też jest izo,
-\item jeśli $h$ jest mono, to $f$ jest mono,
-\item jeśli $h$ jest mono to $g$ \emph{nie} musi być mono.
-\end{itemize}
-\end{problem}
-
-
-\begin{problem}
-Pokazać, że każde dwa obiekty początkowe w danej kategorii są izomorficzne. 
-\end{problem}
-
-\begin{problem}x
-Znaleźć obiekty początkowe i końcowe (jeśli istnieją) w następujących kategoriach:
-$
-\mathsf{Rel},  \mathsf{Mon},\mathsf{CoAlg}(\Sigma\times \mathcal{I}d), \mathsf{Alg}(\Sigma\times \mathcal{I}d+1).
-$\footnote{Niech $F:\mathsf{C}\to \mathsf{C}$ będzie funktorem. $F$-algebrą nazywamy parę $(A,a:FA\to A)$ dla obiektu $A\in \mathsf{C}$. Dla dwóch $F$-algebr $(A,a:FA\to A)$, $(B,b:FB\to B)$ morfizm $h:A\to B$ nazywamy \emph{homomorfizmem} o dziedzinie $(A,a:FA\to A)$ i przeciwdziedzinie $(B,b:FB\to B)$ jeśli $h\circ a = b\circ F(h)$.  Kategorię wszystkich $F$-algebr i homomorfizmów miedzy nimi oznaczamy przez $\mathsf{Alg}(F)$. Kategorię $F$-\emph{koalgebr} $\mathsf{CoAlg}(F)$ definiujemy dualnie.}
-\end{problem}
-
-\begin{problem}
-Zdefiniować korekurencyjnie funkcję $\mathsf{merge}:\Sigma^\omega \times \Sigma^\omega \to \Sigma^\omega$, która każdej parze $(\sigma,\tau)=(\sigma_0\sigma_1\ldots,\tau_0\tau_1\ldots)$ nieskończonych ciągów nad alfabetem $\Sigma$ przyporządkowuje ciąg $$\mathsf{merge}(\sigma,\tau) = \sigma_0\tau_0\sigma_1\tau_1\ldots.$$
-\noindent \emph{Podpowiedź:} Jaki jest obiekt końcowy w $\mathsf{CoAlg}(\Sigma\times \mathcal{I}d)$?    
-\end{problem}
-
-\begin{problem}
-Niech $F:\mathsf{C}\to \mathsf{C}$ będzie funktorem. Udowodnić, że jeśli $(A,a:FA\to A)$ jest obiektem początkowym w $\mathsf{Alg}(F)$ to morfizm $a:FA\to A$ jest izomorfizmem w $\mathsf{C}$. Czy istnieje obiekt początkowy w $\mathsf{Alg}(\mathcal{P})$?
-\end{problem}
-
-
-\begin{problem}
-Pokazać, że w każdej kategorii w której mamy skończone produkty zachodzi:
-$$
-A\times (B\times C) \cong (A\times B)\times C
-$$
-\end{problem}
-
-
-\begin{problem}
-Podać definicję uogólnionego produktu dla dowolnej rodziny $\{X_i\}_{i\in I}$ obiektów z kategorii $\mathsf{C}$. 
-\end{problem}
+%
+%\begin{problem}
+%Pokazać, że każdy izomorfizm jest mono i epi.
+%\end{problem}
+%
+%\begin{problem}
+%Pokazać, że w $\mathsf{Set}$ przekształcenie $f:X\to Y$ jest "na" wtedy i tylko wtedy, gdy jest epimorfizmem.
+%\end{problem}
+%
+%
+%\begin{problem}
+%Niech $f:X\to Y$, $g:Y\to Z$ oraz $h:X\to Z$ spełniają $h= g\circ f$. Pokazać, że 
+%\begin{itemize}
+%\item jeśli $f,g$ są izo to $h$ też jest izo,
+%\item jeśli $h$ jest mono, to $f$ jest mono,
+%\item jeśli $h$ jest mono to $g$ \emph{nie} musi być mono.
+%\end{itemize}
+%\end{problem}
+%
+%
+%\begin{problem}
+%Pokazać, że każde dwa obiekty początkowe w danej kategorii są izomorficzne. 
+%\end{problem}
+%
+%\begin{problem}x
+%Znaleźć obiekty początkowe i końcowe (jeśli istnieją) w następujących kategoriach:
+%$
+%\mathsf{Rel},  \mathsf{Mon},\mathsf{CoAlg}(\Sigma\times \mathcal{I}d), \mathsf{Alg}(\Sigma\times \mathcal{I}d+1).
+%$\footnote{Niech $F:\mathsf{C}\to \mathsf{C}$ będzie funktorem. $F$-algebrą nazywamy parę $(A,a:FA\to A)$ dla obiektu $A\in \mathsf{C}$. Dla dwóch $F$-algebr $(A,a:FA\to A)$, $(B,b:FB\to B)$ morfizm $h:A\to B$ nazywamy \emph{homomorfizmem} o dziedzinie $(A,a:FA\to A)$ i przeciwdziedzinie $(B,b:FB\to B)$ jeśli $h\circ a = b\circ F(h)$.  Kategorię wszystkich $F$-algebr i homomorfizmów miedzy nimi oznaczamy przez $\mathsf{Alg}(F)$. Kategorię $F$-\emph{koalgebr} $\mathsf{CoAlg}(F)$ definiujemy dualnie.}
+%\end{problem}
+%
+%\begin{problem}
+%Zdefiniować korekurencyjnie funkcję $\mathsf{merge}:\Sigma^\omega \times \Sigma^\omega \to \Sigma^\omega$, która każdej parze $(\sigma,\tau)=(\sigma_0\sigma_1\ldots,\tau_0\tau_1\ldots)$ nieskończonych ciągów nad alfabetem $\Sigma$ przyporządkowuje ciąg $$\mathsf{merge}(\sigma,\tau) = \sigma_0\tau_0\sigma_1\tau_1\ldots.$$
+%\noindent \emph{Podpowiedź:} Jaki jest obiekt końcowy w $\mathsf{CoAlg}(\Sigma\times \mathcal{I}d)$?    
+%\end{problem}
+%
+%\begin{problem}
+%Niech $F:\mathsf{C}\to \mathsf{C}$ będzie funktorem. Udowodnić, że jeśli $(A,a:FA\to A)$ jest obiektem początkowym w $\mathsf{Alg}(F)$ to morfizm $a:FA\to A$ jest izomorfizmem w $\mathsf{C}$. Czy istnieje obiekt początkowy w $\mathsf{Alg}(\mathcal{P})$?
+%\end{problem}
+%
+%
+%\begin{problem}
+%Pokazać, że w każdej kategorii w której mamy skończone produkty zachodzi:
+%$$
+%A\times (B\times C) \cong (A\times B)\times C
+%$$
+%\end{problem}
+%
+%
+%\begin{problem}
+%Podać definicję uogólnionego produktu dla dowolnej rodziny $\{X_i\}_{i\in I}$ obiektów z kategorii $\mathsf{C}$. 
+%\end{problem}
 \end{document}
