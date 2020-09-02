@@ -68,8 +68,14 @@ Pokazać, że funktor $(-)^\ast: \mathsf{Set}\to \mathsf{Set}$ spełnia:
 $$
 X^\ast \cong \{ \varepsilon \} + X\times X^\ast,
 $$
-gdzie $\cong$ oznacza relację bijekcji między zbiorami. 
+gdzie $\cong$ oznacza relację bijekcji między zbiorami. Dodatkowo pokazać, że dla $f:X\to Y\in \mathsf{Set}$
+przekształcenie $f^\ast: X^\ast \to Y^\ast$ spełnia:
+$$
+f^\ast (\varepsilon) = \varepsilon \text{ \& } f^\ast (x :: xs) = f(x) :: f^\ast (xs).
+$$
+W powyższej definicji, operacja $ (::) : X\times X^\ast \to X^\ast$ zdefiniowana jest dla $x :: xs$ przez dopisanie elementu $x$ do ciągu $xs$ na pierwszej pozycji. Pokazać, że funktor $(-)^\omega : \mathsf{Set}\to \mathsf{Set}$ spełnia podobne zależności.
 \end{problem}
+
 
 \begin{problem}
 Znaleźć przykład funktora $F:\mathsf{Set}\to\mathsf{Set}$, który spełnia:
@@ -79,7 +85,7 @@ $$
 \end{problem}
 
 \begin{problem}
-Pokazać, że $\mathsf{Rel}\cong \mathsf{Rel}^{op}$. 
+Pokazać, że $\mathsf{Rel}$ jest izomorficzna z $\mathsf{Rel}^{op}$. 
 \end{problem}
 
 
