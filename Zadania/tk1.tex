@@ -73,7 +73,7 @@ przekształcenie $f^\ast: X^\ast \to Y^\ast$ spełnia:
 $$
 f^\ast (\varepsilon) = \varepsilon \text{ \& } f^\ast (x :: xs) = f(x) :: f^\ast (xs).
 $$
-W powyższej definicji, operacja $ (::) : X\times X^\ast \to X^\ast$ zdefiniowana jest dla $x :: xs$ przez dopisanie elementu $x$ do ciągu $xs$ na pierwszej pozycji. Pokazać, że funktor $(-)^\omega : \mathsf{Set}\to \mathsf{Set}$ spełnia podobne zależności.
+W powyższej definicji, operacja $ (::) : X\times X^\ast \to X^\ast$ zdefiniowana jest dla $x :: xs$ przez dopisanie elementu $x$ do ciągu $xs$ na pierwszej pozycji. Udowodnić, że funktor $(-)^\omega : \mathsf{Set}\to \mathsf{Set}$ spełnia podobne zależności.
 \end{problem}
 
 
@@ -92,26 +92,30 @@ Pokazać, że $\mathsf{Rel}$ jest izomorficzna z $\mathsf{Rel}^{op}$.
 \begin{problem}
 Pokazać, że kategoria $\mathsf{Set}$ nie jest izomorficzna z kategorią $\mathsf{Set}^{op}$. 
 \end{problem}
-%
-%\begin{problem}
-%Pokazać, że każdy izomorfizm jest mono i epi.
-%\end{problem}
-%
-%\begin{problem}
-%Pokazać, że w $\mathsf{Set}$ przekształcenie $f:X\to Y$ jest "na" wtedy i tylko wtedy, gdy jest epimorfizmem.
-%\end{problem}
-%
-%
-%\begin{problem}
-%Niech $f:X\to Y$, $g:Y\to Z$ oraz $h:X\to Z$ spełniają $h= g\circ f$. Pokazać, że 
-%\begin{itemize}
-%\item jeśli $f,g$ są izo to $h$ też jest izo,
-%\item jeśli $h$ jest mono, to $f$ jest mono,
-%\item jeśli $h$ jest mono to $g$ \emph{nie} musi być mono.
-%\end{itemize}
-%\end{problem}
-%
-%
+
+\begin{problem}
+Pokazać, że w kategorii $\mathsf{Set}$ strzałka $f:A\to B$ jest izomorfizmem wtedy i tylko wtedy, gdy jest bijekcją. 
+\end{problem}
+
+\begin{problem}
+Pokazać, że każdy izomorfizm jest mono i epi.
+\end{problem}
+
+\begin{problem}
+Pokazać, że w $\mathsf{Set}$ przekształcenie $f:X\to Y$ jest "na" wtedy i tylko wtedy, gdy jest epimorfizmem.
+\end{problem}
+
+
+\begin{problem}
+Niech $f:X\to Y$, $g:Y\to Z$ oraz $h:X\to Z$ spełniają $h= g\circ f$. Pokazać, że 
+\begin{itemize}
+\item jeśli $f,g$ są izo to $h$ też jest izo,
+\item jeśli $h$ jest mono, to $f$ jest mono,
+\item jeśli $h$ jest mono to $g$ \emph{nie} musi być mono.
+\end{itemize}
+\end{problem}
+
+
 %\begin{problem}
 %Pokazać, że każde dwa obiekty początkowe w danej kategorii są izomorficzne. 
 %\end{problem}
