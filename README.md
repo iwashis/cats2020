@@ -12,7 +12,10 @@ w roku akademickim 2020/2021.
   na ćwiczeniach/rozwiązywania prac domowych,
 * 2 x 15 punktów to maksymalny wynik z dwóch testów 
   (pierwszego w połowie semestru, drugiego pod koniec).
-
+* W trakcie wykładów zadawane będą prace domowe za które przewidziane są dodatkowe
+  punkty (maksymalnie 10) doliczające się do podstawy punktów.
+  Oznacza to, że rozwiązując wszystkie zadania wykładowe, będąc super aktywnym
+  na ćwiczeniach i maksując testy można zdobyć łącznie 50 punktów na 40 możliwych.
 
 ## Literatura pomocnicza
 
