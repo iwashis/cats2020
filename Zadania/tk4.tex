@@ -81,7 +81,42 @@ Poset $(P,\leq)$, który jest $\omega CPO$ nazywamy \emph{punktowym}, jeśli ist
 \begin{problem}
 Pokazać, że kategoria wszystkich małych kategorii i funktorów $\mathsf{Cat}$ jest CCC, gdzie $\mathsf{C}^\mathsf{D} = Fun(\mathsf{C},\mathsf{D})$. 
 \end{problem}
+
+\begin{problem}
+Udowodnić (dokończając dowód z Wykładu 10), że dla każdego $f:X\times A\to Y\times A$ i $g:Y\times A\to Z\times A$
+zachodzi
+$$
+\widetilde{g\circ f} = (\varepsilon_{Z\times A})^A\circ (\widetilde{g}\times \mathsf{id}_A)^A\circ \widetilde{f}
+$$
+\end{problem}
+
+\begin{problem}
+Niech $\mathsf{State}_A$ będzie złożeniem funktorów $(-)\times A$ i $(-)^A$ (czyli $\mathsf{State}_A(X) = (X\times A)^A$ oraz
+$\mathsf{State}_A(X\stackrel{f}{\to} Y) = \widetilde{ (f\times \mathsf{id}_A) \circ \varepsilon_{X\times A} }$). Dla dwóch strzałek $f:X\to \mathsf{State}_A Y$ i $g:Y\to \mathsf{State}_A Z$ definiujemy:
+\begin{align}
+g\cdot f = \mu_Z \circ \mathsf{State}_A (g) \circ f,\label{eq:composition}
+\end{align}
+gdzie $\mu_X:\mathsf{State}_A\mathsf{State}_A X \to \mathsf{State}_A X; \mu_X = (\varepsilon_{X\times A})^A$. Pokazać, że tak zdefiniowane działanie jest łączne oraz, że $\eta_Y \cdot f = f\cdot \eta_X = f$ dla $\eta_X:X\to \mathsf{State}_A X$ zdefiniowanego przez $\eta_X = \widetilde{id_{X\times A}}$ (Podpowiedź: skorzystać z poprzedniego zadania).
+\end{problem}
+
+%\begin{problem}
+%Niech $W$ będzie wybranym obiektem kategorii $\mathbb{C}$ i zdefiniujmy $\mathsf{IO} = \mathsf{State}_W$.  Używając operacji składania $\circ$ w kategorii $\mathbb{C}$, operacji $\cdot$ zdefiniowanej (\ref{eq:composition}) i wymienionych poniżej morfizmów:
+%\begin{align*}
+%& \textbf{show} : Bool \to String, \ \textbf{length} : String \to Integer,\ \textbf{removeCapitals} : String \to String, \\
+%& \textbf{reverse} : String \to String, \textbf{equal} : Integer \times Integer \to Bool, \textbf{concat}: String \times String \to String \\
+%& \textbf{readString} : () \to IO\  String, \textbf{putString} : String \to \mathsf{IO}\ (), \textbf{readFile} : String \to \mathsf{IO}\ String, \\
+%& \textbf{split} : \forall a. a \to a\times a, \textbf{fst}: \forall a. a\times a\to a, \textbf{twist} : \forall ab. a\times b \to b \times a , \\
+%& \textbf{strength} : \forall a b. a \times \mathsf{IO} \ b \to \mathsf{IO} (a\times b), \ \textbf{pure}:\forall a. a\to \textsf{IO} \ a.
+%\end{align*}
 %
+%napisać  program $\textbf{main}:()\to \mathsf{IO} ()$, który:
+%\begin{enumerate}
+%\item wczytuje z klawiatury dwie nazwy plików, wczytuje pliki i sprawdza czy ich zawartość jest tej samej długości, a następnie wyświetla tą informację na standardowym outpucie.
+%\item wczytuje z klawiatury nazwę pliku, wczytuje plik i wyświetla jego nazwę zapisaną od tyłu złączoną z jego zawartością (zawartość wyświetlana jest nieodwrócona).
+%\end{enumerate}
+%\end{problem}
+%
+%%
 %\begin{problem}
 %Pokazać, że $Fun(\mathsf{C},\mathsf{D})$ ma binarne produkty jeśli $\mathsf{D}$ ma binarne produkty.
 %\end{problem}
