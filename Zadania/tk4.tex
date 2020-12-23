@@ -1,4 +1,4 @@
-\documentclass[10pt]{amsart}
+\documentclass[9pt]{amsart}
 
 \usepackage{amssymb, latexsym, amscd,stmaryrd}
 \usepackage{amsfonts, polski}
@@ -91,12 +91,15 @@ $$
 \end{problem}
 
 \begin{problem}
-Niech $\mathsf{State}_A$ będzie złożeniem funktorów $(-)\times A$ i $(-)^A$ (czyli $\mathsf{State}_A(X) = (X\times A)^A$ oraz
+Niech $\mathsf{State}_A$ będzie złożeniem funktorów 
+$(-)\times A$ i $(-)^A$ (czyli $\mathsf{State}_A(X) = (X\times A)^A$ oraz
 $\mathsf{State}_A(X\stackrel{f}{\to} Y) = \widetilde{ (f\times \mathsf{id}_A) \circ \varepsilon_{X\times A} }$). Dla dwóch strzałek $f:X\to \mathsf{State}_A Y$ i $g:Y\to \mathsf{State}_A Z$ definiujemy:
-\begin{align}
-g\cdot f = \mu_Z \circ \mathsf{State}_A (g) \circ f,\label{eq:composition}
-\end{align}
-gdzie $\mu_X:\mathsf{State}_A\mathsf{State}_A X \to \mathsf{State}_A X; \mu_X = (\varepsilon_{X\times A})^A$. Pokazać, że tak zdefiniowane działanie jest łączne oraz, że $\eta_Y \cdot f = f\cdot \eta_X = f$ dla $\eta_X:X\to \mathsf{State}_A X$ zdefiniowanego przez $\eta_X = \widetilde{id_{X\times A}}$ (Podpowiedź: skorzystać z poprzedniego zadania).
+\begin{align*}
+  g\cdot f = (\varepsilon_{X\times A})^A \circ \mathsf{State}_A (g) \circ f.
+\end{align*}
+Pokazać, że tak zdefiniowane działanie jest łączne oraz, że 
+$\eta_Y \cdot f = f\cdot \eta_X = f$ dla $\eta_X:X\to \mathsf{State}_A X$ 
+zadanego przez $\eta_X = \widetilde{id_{X\times A}}$ (Podpowiedź: skorzystać z poprzedniego zadania).
 \end{problem}
 
 %\begin{problem}
