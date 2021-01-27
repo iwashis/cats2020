@@ -82,13 +82,12 @@ Pokazać, że następujące trójki są monadami:
   \begin{align*}
     & (h\cdot g)\cdot f = h\cdot (g\cdot f) \text{ oraz } f\cdot \eta_A = \eta_B\cdot f = f.  
   \end{align*}
-  
 \end{problem}
 
 \begin{problem}
  Trójkę $(T,(-)^\ast, \eta)$ nazywamy \emph{trójką Kleisliego}, jeśli
  \begin{itemize}
-   \item $T:\mathbb{C}\to \mathbb{C}$ jest funktorem,
+   \item $T:\mathbb{C}_o\to \mathbb{C}_o$ jest przyporządkowaniem,
    \item $\eta= \{\eta_X:X\to TX\}_{X\in \mathbb{C}}$ jest rodziną strzałek,
    \item $(-)^\ast$ przyporządkowuje dowolnej strzałce $f:X\to TY$ strzałkę $f^\ast :TX\to TY$, 
   \end{itemize}
@@ -97,8 +96,11 @@ Pokazać, że następujące trójki są monadami:
    \eta_X^\ast = id_{TX}, \text{ oraz } f^\ast \circ \eta_X = f \text{ oraz } 
     (g^\ast \circ f)^\ast = g^\ast \circ f^\ast.
  \]
- Pokazać, że jeśli $(T, (-)^\ast, \eta)$ jest trójką Kleisliego, to $(T,\mu,\eta)$ jest monadą dla 
- $\mu = \{\mu_X:T^2X\to TX\}$ dla $\mu_X = (id_{TX})^\ast$. Ponadto, jeśli $(T,(-)^\ast, \eta)$ jest monadą, to $(T,(-)^\ast, \eta)$ jest trójką Kleisliego, gdzie $f^\ast = \mu_Y \circ Tf$ dla $f:X\to TY$. 
+ Pokazać, że jeśli $(T, (-)^\ast, \eta)$ jest trójką Kleisliego, to $(T,\mu,\eta)$ jest monadą, gdzie $Tf = (\eta_Y\circ f)^\ast$ 
+ dla każdej strzałki $f:X\to Y$ oraz
+ $\mu = \{\mu_X:T^2X\to TX\}$ dla $\mu_X = (id_{TX})^\ast$. 
+ Ponadto, jeśli $(T,(-)^\ast, \eta)$ jest monadą, 
+ to $(T,(-)^\ast, \eta)$ jest trójką Kleisliego, gdzie $f^\ast = \mu_Y \circ Tf$ dla $f:X\to TY$. 
 \end{problem} 
 
 \end{document}
